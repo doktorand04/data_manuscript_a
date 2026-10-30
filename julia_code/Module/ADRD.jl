@@ -1,9 +1,10 @@
 """
     ADRD
 
-TODO: one-paragraph description of the model (consumers with a trait trade-off
-competing for two diffusing resources on a periodic grid) and what the module
-computes (eco-evolutionary trajectories to an evolutionarily stable state).
+The `ADRD` module implements the eco-evolutionary model of two resources and 
+multiple consumer species, as described in the manuscript. It provides functions
+for simulating the dynamics of the system, computing invasion fitness, and 
+generating biodiversity through adaptive dynamics.
 
 The main entry points are [`biodiversity_generator_2`](@ref) (start from a single
 species) and [`biodiversity_generator_from_mid`](@ref) (resume from a saved state).

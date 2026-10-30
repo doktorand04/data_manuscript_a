@@ -10,9 +10,9 @@ Immutable container for all model parameters. Because it is immutable, "changing
 a parameter creates a new object, e.g. `p = @set p.S = p.S + 1`.
 
 # Fields
-- `s`, `a₀`: TODO describe
-- `b`: TODO describe (default `4.0`)
-- `α`, `β`, `γ`: TODO describe (defaults `0.5`, `0.1`, `1.0`)
+- `s`, `a₀`: the degree of substitutability and the parameter controlling the strength of the consumer-affinity trade-off
+- `b`: the parameter controlling the shape of the trade-off (default `4.0`)
+- `α`, `β`, `γ`: non-dimensional parameters for growth and renewal rate (defaults `0.5`, `0.1`, `1.0`)
 - `δ`: diffusion coefficient of the consumers
 - `δᵣ`: diffusion coefficient of the resources
 - `N`: number of grid points per side (the spatial grid has `N^2` cells)
@@ -20,7 +20,7 @@ a parameter creates a new object, e.g. `p = @set p.S = p.S + 1`.
 - `δΔ`, `δᵣΔ`: consumer / resource diffusion operators (`δ` and `δᵣ` times the
   spectral Laplacian). Derived from `δ`, `δᵣ` and `N`; do not edit separately.
 - `ess`: `true` once an evolutionarily stable state has been reached
-- `ϵ_evo`: TODO describe (default `1e-6`)
+- `ϵ_evo`: the timescale separation between ecological and evolutionary timescales (default `1e-6`)
 - `S`: current number of consumer species
 
 Use the positional constructor
